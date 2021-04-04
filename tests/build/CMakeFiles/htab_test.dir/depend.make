@@ -3,6 +3,7 @@
 
 CMakeFiles/htab_test.dir/htab_bucket_count.c.o: ../htab.h
 CMakeFiles/htab_test.dir/htab_bucket_count.c.o: ../htab_bucket_count.c
+CMakeFiles/htab_test.dir/htab_bucket_count.c.o: ../htab_private.h
 
 
 CMakeFiles/htab_test.dir/htab_erase.c.o: ../htab.h
@@ -10,6 +11,7 @@ CMakeFiles/htab_test.dir/htab_erase.c.o: ../htab_erase.c
 
 CMakeFiles/htab_test.dir/htab_find.c.o: ../htab.h
 CMakeFiles/htab_test.dir/htab_find.c.o: ../htab_find.c
+CMakeFiles/htab_test.dir/htab_find.c.o: ../htab_private.h
 
 CMakeFiles/htab_test.dir/htab_for_each.c.o: ../htab.h
 CMakeFiles/htab_test.dir/htab_for_each.c.o: ../htab_for_each.c
@@ -26,11 +28,13 @@ CMakeFiles/htab_test.dir/htab_init.c.o: ../htab_private.h
 
 CMakeFiles/htab_test.dir/htab_lookup_add.c.o: ../htab.h
 CMakeFiles/htab_test.dir/htab_lookup_add.c.o: ../htab_lookup_add.c
+CMakeFiles/htab_test.dir/htab_lookup_add.c.o: ../htab_private.h
 
 CMakeFiles/htab_test.dir/htab_move.c.o: ../htab.h
 CMakeFiles/htab_test.dir/htab_move.c.o: ../htab_move.c
 
 CMakeFiles/htab_test.dir/htab_size.c.o: ../htab.h
+CMakeFiles/htab_test.dir/htab_size.c.o: ../htab_private.h
 CMakeFiles/htab_test.dir/htab_size.c.o: ../htab_size.c
 
 CMakeFiles/htab_test.dir/htab_test.cpp.o: ../htab_test.cpp

@@ -11,7 +11,7 @@
 htab_t *htab_init(size_t n)
 {
     if (n <= 0) return NULL;
-    htab_t *hash_table = malloc(sizeof(htab_t) + n * sizeof(struct htab_item*));
+    htab_t *hash_table = malloc(sizeof(htab_t) + n * sizeof(htab_item_t*));
     if (hash_table == NULL) return NULL;
     
     hash_table->size = 0;

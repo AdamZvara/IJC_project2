@@ -19,14 +19,17 @@
   +---+
 */
 
+typedef struct htab_item htab_item_t;
+
 /**
  * @struct htab_item
  * @brief Private declaration of hash table item (linked list)
 */
 struct htab_item {
     htab_pair_t pair;           ///<Item pair containing word and its counter
-    struct htab_item *next;     ///<Pointer to next table item
+    htab_item_t *next;     ///<Pointer to next table item
 };
+
 
 /**
  * @struct htab

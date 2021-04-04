@@ -1,0 +1,56 @@
+Start testing: Apr 04 19:19 CEST
+----------------------------------------------------------
+1/17 Testing: Htab.Test_lifecycle
+1/17 Test: Htab.Test_lifecycle
+Command: "/home/adam/ijc/project/tests/build/htab_test" "--gtest_filter=Htab.Test_lifecycle"
+Directory: /home/adam/ijc/project/tests/build
+"Htab.Test_lifecycle" start time: Apr 04 19:19 CEST
+Output:
+----------------------------------------------------------
+Running main() from /home/adam/ijc/project/tests/build/googletest-master/googletest/src/gtest_main.cc
+Note: Google Test filter = Htab.Test_lifecycle
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Htab
+[ RUN      ] Htab.Test_lifecycle
+[       OK ] Htab.Test_lifecycle (0 ms)
+[----------] 1 test from Htab (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Htab.Test_lifecycle" end time: Apr 04 19:19 CEST
+"Htab.Test_lifecycle" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/17 Testing: HtabEmpty.Test_lookup_add
+2/17 Test: HtabEmpty.Test_lookup_add
+Command: "/home/adam/ijc/project/tests/build/htab_test" "--gtest_filter=HtabEmpty.Test_lookup_add"
+Directory: /home/adam/ijc/project/tests/build
+"HtabEmpty.Test_lookup_add" start time: Apr 04 19:19 CEST
+Output:
+----------------------------------------------------------
+Running main() from /home/adam/ijc/project/tests/build/googletest-master/googletest/src/gtest_main.cc
+Note: Google Test filter = HtabEmpty.Test_lookup_add
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from HtabEmpty
+[ RUN      ] HtabEmpty.Test_lookup_add
+[       OK ] HtabEmpty.Test_lookup_add (0 ms)
+[----------] 1 test from HtabEmpty (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"HtabEmpty.Test_lookup_add" end time: Apr 04 19:19 CEST
+"HtabEmpty.Test_lookup_add" time elapsed: 00:00:00
+----------------------------------------------------------
+
