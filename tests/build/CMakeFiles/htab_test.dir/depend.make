@@ -8,6 +8,7 @@ CMakeFiles/htab_test.dir/htab_bucket_count.c.o: ../htab_private.h
 
 CMakeFiles/htab_test.dir/htab_erase.c.o: ../htab.h
 CMakeFiles/htab_test.dir/htab_erase.c.o: ../htab_erase.c
+CMakeFiles/htab_test.dir/htab_erase.c.o: ../htab_private.h
 
 CMakeFiles/htab_test.dir/htab_find.c.o: ../htab.h
 CMakeFiles/htab_test.dir/htab_find.c.o: ../htab_find.c

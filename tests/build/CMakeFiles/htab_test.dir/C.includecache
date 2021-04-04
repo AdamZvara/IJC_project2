@@ -16,6 +16,12 @@ stdbool.h
 htab_private.h
 /home/adam/ijc/project/tests/htab_private.h
 
+/home/adam/ijc/project/tests/htab_erase.c
+stdlib.h
+-
+htab_private.h
+/home/adam/ijc/project/tests/htab_private.h
+
 /home/adam/ijc/project/tests/htab_find.c
 stdlib.h
 -

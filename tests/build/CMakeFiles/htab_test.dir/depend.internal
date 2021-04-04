@@ -9,6 +9,7 @@ CMakeFiles/htab_test.dir/htab_clear.c.o
 CMakeFiles/htab_test.dir/htab_erase.c.o
  /home/adam/ijc/project/tests/htab.h
  /home/adam/ijc/project/tests/htab_erase.c
+ /home/adam/ijc/project/tests/htab_private.h
 CMakeFiles/htab_test.dir/htab_find.c.o
  /home/adam/ijc/project/tests/htab.h
  /home/adam/ijc/project/tests/htab_find.c
