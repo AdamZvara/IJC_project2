@@ -1,0 +1,3 @@
+/home/adam/ijc/project/tests/build/googletest/CMakeFiles/rebuild_cache.dir
+/home/adam/ijc/project/tests/build/googletest/CMakeFiles/edit_cache.dir
+/home/adam/ijc/project/tests/build/googletest/CMakeFiles/googletest.dir

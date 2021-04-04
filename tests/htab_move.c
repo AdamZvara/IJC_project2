@@ -1,0 +1,13 @@
+/*
+ * @brief Move contructor, task B) IJC - DU2
+ * @file htab_move.c
+ * @author Adam Zvara, xzvara01 - FIT
+ * @date 4.4.2021
+ */
+
+#include "htab.h"
+
+htab_t *htab_move(size_t n, htab_t *from)
+{
+    return NULL;
+}
