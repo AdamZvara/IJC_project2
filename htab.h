@@ -20,18 +20,6 @@ struct htab;
  */
 typedef struct htab htab_t;
 
-/* HTAB structure where size = 3, arr_size = 2
-/ +----------+
-  |   size   | number of records [key,data),next]
-  +----------+
-  | arr_size | size of the following array 
-  +----------+
-  |ptr|-->[(key,data),next]-->[(key,data),next]-->[(key,data),next]--|
-  +---+
-  |ptr|--|
-  +---+
-*/
-
 /** 
  * @typedef htab_key_t
  * @brief String - word from htab_pair

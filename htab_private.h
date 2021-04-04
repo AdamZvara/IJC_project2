@@ -19,7 +19,6 @@
   +---+
 */
 
-
 /**
  * @struct htab
  * @brief Private declaration of hash table structure for library
