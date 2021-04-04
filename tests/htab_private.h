@@ -20,21 +20,11 @@
 */
 
 /**
- * @struct htab_item
- * @brief Private declaration of hash table item (linked list)
-*/
-struct htab_item {
-    htab_pair_t pair;           ///<Item pair containing word and its counter
-    struct htab_item *next;     ///<Pointer to next table item
-};
-
-/**
  * @struct htab
  * @brief Private declaration of hash table structure for library
-*/
+ */
 struct htab {
-    size_t size;                 ///<Number of records from hash table
-    size_t arr_size;             ///<Number of pointers in arr
-    struct htab_item *arr[];     ///<Array of pointers
+    size_t size;
+    size_t arr_size;
+    htab_pair_t *arr[];
 };
-

@@ -18,3 +18,15 @@ stdint.h
 htab.h
 /home/adam/ijc/project/tests/htab.h
 
+/home/adam/ijc/project/tests/htab_init.c
+stdlib.h
+-
+htab.h
+/home/adam/ijc/project/tests/htab.h
+htab_private.h
+/home/adam/ijc/project/tests/htab_private.h
+
+/home/adam/ijc/project/tests/htab_private.h
+htab.h
+/home/adam/ijc/project/tests/htab.h
+

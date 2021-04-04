@@ -39,7 +39,7 @@ typedef int htab_value_t;
 typedef struct htab_pair {
     htab_key_t   key;       ///< string - word from text
     htab_value_t value;     ///< Integer - counter of words in text
-} htab_pair_t;
+} htab_pair_t;              ///< typedef of htab_pair
 
 /**
  * @brief Hash function for the Hash Table
@@ -58,7 +58,7 @@ size_t htab_hash_function(htab_key_t str);
  * @param n Number of pointers in array
  *
  * @return Pointer to newly initialized HT
- * @return NULL if malloc was not successful
+ * @return NULL if malloc was not successful, or if n <= 0
 */
 htab_t *htab_init(size_t n);
 

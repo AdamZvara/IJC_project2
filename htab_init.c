@@ -6,13 +6,12 @@
  */
 
 #include <stdlib.h>
-#include "htab.h"
 #include "htab_private.h"
 
 htab_t *htab_init(size_t n)
 {
     if (n <= 0) return NULL;
-    htab_t *hash_table = malloc(sizeof(htab_t) + n * sizeof(htab_pair_t *));
+    htab_t *hash_table = malloc(sizeof(htab_t) + n * sizeof(struct htab_item*));
     if (hash_table == NULL) return NULL;
     
     hash_table->size = 0;

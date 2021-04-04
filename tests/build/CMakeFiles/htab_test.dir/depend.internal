@@ -23,6 +23,7 @@ CMakeFiles/htab_test.dir/htab_hash_function.c.o
 CMakeFiles/htab_test.dir/htab_init.c.o
  /home/adam/ijc/project/tests/htab.h
  /home/adam/ijc/project/tests/htab_init.c
+ /home/adam/ijc/project/tests/htab_private.h
 CMakeFiles/htab_test.dir/htab_lookup_add.c.o
  /home/adam/ijc/project/tests/htab.h
  /home/adam/ijc/project/tests/htab_lookup_add.c
