@@ -5,9 +5,11 @@
  * @date 4.4.2021
  */
 
-#include "htab.h"
+#include <stdlib.h>
+#include "htab_private.h"
 
 void htab_free(htab_t *t)
 {
-    return;
+    htab_clear(t);
+    free(t);
 }

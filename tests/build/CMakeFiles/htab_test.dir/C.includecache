@@ -28,6 +28,12 @@ stdlib.h
 htab_private.h
 /home/adam/ijc/project/tests/htab_private.h
 
+/home/adam/ijc/project/tests/htab_free.c
+stdlib.h
+-
+htab_private.h
+/home/adam/ijc/project/tests/htab_private.h
+
 /home/adam/ijc/project/tests/htab_hash_function.c
 stdint.h
 -
@@ -43,6 +49,10 @@ htab_private.h
 /home/adam/ijc/project/tests/htab_lookup_add.c
 stdlib.h
 -
+htab_private.h
+/home/adam/ijc/project/tests/htab_private.h
+
+/home/adam/ijc/project/tests/htab_move.c
 htab_private.h
 /home/adam/ijc/project/tests/htab_private.h
 

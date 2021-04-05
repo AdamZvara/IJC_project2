@@ -161,8 +161,8 @@ CMakeFiles/htab_test.dir/clean:
 # Target rules for target googletest-build/googlemock/CMakeFiles/gmock_main.dir
 
 # All Build rule for target.
-googletest-build/googlemock/CMakeFiles/gmock_main.dir/all: googletest-build/googlemock/CMakeFiles/gmock.dir/all
 googletest-build/googlemock/CMakeFiles/gmock_main.dir/all: googletest-build/googletest/CMakeFiles/gtest.dir/all
+googletest-build/googlemock/CMakeFiles/gmock_main.dir/all: googletest-build/googlemock/CMakeFiles/gmock.dir/all
 	$(MAKE) -f googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make googletest-build/googlemock/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) -f googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make googletest-build/googlemock/CMakeFiles/gmock_main.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/adam/ijc/project/tests/build/CMakeFiles --progress-num=3,4 "Built target gmock_main"

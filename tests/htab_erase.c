@@ -21,11 +21,13 @@ bool htab_erase(htab_t *t, htab_key_t key)
     {
         if (tmp->next == NULL)
         {
+            free((char *)tmp->pair.key);
             free(tmp);
             t->arr[index] = NULL;
         } else
         {
             htab_item_t *tmp2 = tmp->next;
+            free((char *)tmp->pair.key);
             free(tmp);
             t->arr[index] = tmp2;
         }
@@ -40,6 +42,7 @@ bool htab_erase(htab_t *t, htab_key_t key)
             !strncmp(tmp->next->pair.key, key, strlen(tmp->next->pair.key)))
         {
             htab_item_t *tmp2 = tmp->next->next;
+            free((char *)tmp->next->pair.key);
             free(tmp->next);
             tmp->next = tmp2;
             

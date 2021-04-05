@@ -14,6 +14,21 @@ void htab_clear(htab_t *t)
     {
         for (htab_item_t *tmp = t->arr[i]; tmp != NULL; tmp = tmp->next)
         {
+            if (tmp->next == NULL) 
+            {
+                free((char *)tmp->pair.key);
+                free(tmp);
+                break;
+            }
+
+            htab_item_t *tmp2 = tmp->next;
+            while (tmp2 != NULL)
+            {
+                free((char *)tmp->pair.key);
+                free(tmp);
+                tmp = tmp2;
+                tmp2 = tmp2->next;
+            }
             free(tmp);
         }
 

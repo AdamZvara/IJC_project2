@@ -19,6 +19,7 @@ CMakeFiles/htab_test.dir/htab_for_each.c.o: ../htab_for_each.c
 
 CMakeFiles/htab_test.dir/htab_free.c.o: ../htab.h
 CMakeFiles/htab_test.dir/htab_free.c.o: ../htab_free.c
+CMakeFiles/htab_test.dir/htab_free.c.o: ../htab_private.h
 
 CMakeFiles/htab_test.dir/htab_hash_function.c.o: ../htab.h
 CMakeFiles/htab_test.dir/htab_hash_function.c.o: ../htab_hash_function.c
@@ -33,11 +34,13 @@ CMakeFiles/htab_test.dir/htab_lookup_add.c.o: ../htab_private.h
 
 CMakeFiles/htab_test.dir/htab_move.c.o: ../htab.h
 CMakeFiles/htab_test.dir/htab_move.c.o: ../htab_move.c
+CMakeFiles/htab_test.dir/htab_move.c.o: ../htab_private.h
 
 CMakeFiles/htab_test.dir/htab_size.c.o: ../htab.h
 CMakeFiles/htab_test.dir/htab_size.c.o: ../htab_private.h
 CMakeFiles/htab_test.dir/htab_size.c.o: ../htab_size.c
 
+CMakeFiles/htab_test.dir/htab_test.cpp.o: ../htab.h
 CMakeFiles/htab_test.dir/htab_test.cpp.o: ../htab_test.cpp
 CMakeFiles/htab_test.dir/htab_test.cpp.o: googletest-master/googletest/include/gtest/gtest-death-test.h
 CMakeFiles/htab_test.dir/htab_test.cpp.o: googletest-master/googletest/include/gtest/gtest-matchers.h

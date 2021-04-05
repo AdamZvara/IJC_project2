@@ -6,9 +6,12 @@ int main(int argc, char *argv[])
     (void) argc; (void) argv;
 
     htab_t *table = htab_init(3);
-    htab_pair_t *pair = htab_lookup_add(table, "ab");
-    pair = htab_lookup_add(table, "abc");
+    htab_lookup_add(table, "adam");
+    htab_lookup_add(table, "tomas");
+    htab_lookup_add(table, "miro");
 
-    htab_erase(table, "ab");
+    htab_t *table2 = htab_move(5, table);
+
+
     return 0;
 }
