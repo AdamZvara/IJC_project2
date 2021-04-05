@@ -1,4 +1,4 @@
-/*
+/**
  * @brief Delte all records from table, task B) IJC - DU2
  * @file htab_clear.c
  * @author Adam Zvara, xzvara01 - FIT
@@ -29,6 +29,8 @@ void htab_clear(htab_t *t)
                 tmp = tmp2;
                 tmp2 = tmp2->next;
             }
+
+            free((char *)tmp->pair.key);
             free(tmp);
         }
 

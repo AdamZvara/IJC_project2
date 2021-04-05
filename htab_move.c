@@ -7,8 +7,6 @@
 
 #include "htab_private.h"
 
-#define MIN(x,y) ((x < y) ? x : y)
-
 htab_t *htab_move(size_t n, htab_t *from)
 {
     htab_t *table = htab_init(n);
@@ -16,26 +14,33 @@ htab_t *htab_move(size_t n, htab_t *from)
 
     table->size = from->size;
 
-    for (size_t i = 0; i < MIN(table->arr_size, from->arr_size); i++)
+    for (size_t i = 0; i < from->arr_size; i++)
     {
-        table->arr[i] = from->arr[i];
-        from->arr[i] = NULL;
-    }
+        htab_item_t *tmp;
 
-    if (from->arr_size > table->arr_size)
-    {
-        for (size_t i = MIN(table->arr_size, from->arr_size); i < from->arr_size; i++)
+        while ((tmp = from->arr[i]) != NULL)
         {
-            size_t new_index = htab_hash_function(from->arr[i]->pair.key);
+            from->arr[i] = tmp->next;
+            tmp->next = NULL;
+
+            size_t new_index = htab_hash_function(tmp->pair.key);
             new_index %= table->arr_size;
 
-            htab_item_t *tmp = table->arr[new_index];
-            while (tmp->next != NULL)
+            if (table->arr[new_index] == NULL) 
             {
-                tmp = tmp->next;
+                table->arr[new_index] = tmp;
             }
-
-            tmp->next = from->arr[i];
+            else
+            {
+                for (htab_item_t *tmp2 = table->arr[new_index]; tmp2 != NULL; tmp2 = tmp2->next)
+                {
+                    if (tmp2->next == NULL)
+                    {
+                        tmp2->next = tmp;
+                        break;
+                    }
+                }
+            }
         }
     }
 

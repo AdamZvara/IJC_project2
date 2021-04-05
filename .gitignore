@@ -3,3 +3,4 @@ solution/
 template/
 *.swp
 wordcount
+tests/

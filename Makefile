@@ -15,7 +15,7 @@ $(OBJS): $(SRC) $(HEADERS)
 tail: tail.o
 	$(CC) $(CLFAGS) $< -o $@
 
-wordcount: $(OBJS)
+wordcount: $(filter-out tail.o,$(OBJS))
 	$(CC) $(CFLAGS) $^ -o $@
 
 clean:

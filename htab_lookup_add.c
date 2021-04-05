@@ -31,7 +31,7 @@ htab_item_t *item_create(htab_key_t key)
         return NULL;
     }
     memcpy((char *)item->pair.key, key, length);
-    item->pair.value = 0;
+    item->pair.value = 0; //or 1 depends on who's asking
     item->next = NULL;
 
     return item;
@@ -45,6 +45,7 @@ htab_pair_t *htab_lookup_add(htab_t *t, htab_key_t key)
     htab_pair_t *pair = htab_find(t, key);
     if (pair != NULL) 
     {
+        //pair->value++;
         return pair;
     }
 
@@ -64,6 +65,7 @@ htab_pair_t *htab_lookup_add(htab_t *t, htab_key_t key)
             {
                 tmp->next = new_item;
                 t->size++;
+                break;
             }
         }
     }
