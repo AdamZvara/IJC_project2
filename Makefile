@@ -12,6 +12,9 @@ all: wordcount
 $(OBJS): $(SRC) $(HEADERS)
 	$(CC) $(CFLAGS) -c $^
 
+tail: tail.o
+	$(CC) $(CLFAGS) $< -o $@
+
 wordcount: $(OBJS)
 	$(CC) $(CFLAGS) $^ -o $@
 
