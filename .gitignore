@@ -4,3 +4,6 @@ template/
 *.swp
 wordcount
 tests/
+tail
+*.a
+*.so
