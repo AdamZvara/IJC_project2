@@ -8,16 +8,13 @@ LIB_HEADERS=htab.h htab_private.h
 
 .PHONY: clean
 
-all: tail wordcount
+all: tail wordcount 
 
 tail: tail.o
 	$(CC) $(CLFAGS) $< -o $@
 
-wordcount: wordcount.o libhtab.a 
-	$(CC) $(CFLAGS) wordcount.o -o $@ -static -L. -lhtab
-
-wordcount.o: wordcount.c
-	$(CC) $(CFLAGS) -c $<
+wordcount: wordcount.o io.o libhtab.a 
+	$(CC) $(CFLAGS) wordcount.o io.o -o $@ -static -L. -lhtab
 
 #static library
 libhtab.a: $(LIB_OBJ) $(LIB_HEADERS)
