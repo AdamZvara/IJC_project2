@@ -3,6 +3,9 @@
  * @file tail.c
  * @author Adam Zvara, xzvara01 - FIT
  * @date 29.3.2021
+ * @details Program can take parameter -n followed by number of 
+ * lines to print. The number of lines must be larger than 0
+ * (from assignment)
  */
 
 #include <stdio.h>
@@ -103,10 +106,11 @@ void print_lines(char lines[][LINE_LEN+2], int lines_num, int index, bool cyclic
 
 int main(int argc, char *argv[]){
     
-    int lines_num = 10;          //</number of lines to print
-    bool cyclic = false;         //</indicator, if index surpassed lines_num 
-    char *filename = NULL;       //</name of the file   
-    bool plus = false;           //</indicator of '+' sign after '-n' option
+    int lines_num = 10;          //number of lines to print
+    bool cyclic = false;         //indicator, if index surpassed lines_num 
+    char *filename = NULL;       //name of the file   
+    bool plus = false;           //indicator of '+' sign after '-n' option
+    bool warning = false;        //waning message if line is longer than the limit
 
     switch (arguments(argc, argv, &lines_num, &filename))
     {
@@ -132,8 +136,8 @@ int main(int argc, char *argv[]){
         fr = stdin;   
     }
 
-    char lines[lines_num][LINE_LEN+2];  //</circular buffer to store lines from a file
-    int index = 0;                      //</index of circular buffer
+    char lines[lines_num][LINE_LEN+2];  //<circular buffer to store lines from a file
+    int index = 0;                      //<index of circular buffer
     
     int line_counter = 0;
     while (fgets(lines[index], LINE_LEN+1, fr) != NULL)
@@ -144,6 +148,12 @@ int main(int argc, char *argv[]){
             lines[index][LINE_LEN+1] = '\0';
             while (fgetc(fr) != '\n')
                 ;
+
+            if (!warning)
+            {
+                warning = true;
+                fprintf(stderr, "Prekrocenie limitu dlzky riadku\n");
+            }
         }
         if (plus && line_counter+1 >= lines_num)
         {
@@ -161,7 +171,7 @@ int main(int argc, char *argv[]){
  
     if (!plus)
     {
-        print_lines(lines, lines_num, index, cyclic);
+       print_lines(lines, lines_num, index, cyclic);
     }
 
     fclose(fr);
