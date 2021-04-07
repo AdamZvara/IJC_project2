@@ -1,5 +1,12 @@
-#include <stdio.h>
+/**
+ * @brief Counting number of words in a text
+ * @file wordcount.c
+ * @author Adam Zvara, xzvara01 - FIT
+ * @date 7.4.2021
+ * @details Program can take 1 argument (filename) or reads from stdin
+ */
 
+#include <stdio.h>
 #include <stdlib.h>
 #include "htab.h"
 #include "io.h"
@@ -11,6 +18,11 @@
 #define HTAB_SIZE 20011
 #define MAX_WORD_LEN 127
 
+/**
+ * @brief Function to write out each word and value from hash table
+ *
+ * @param data Pointer to htab pair structure from HT
+ */
 void write_pair(htab_pair_t *data)
 {
     printf("%s %d\n", data->key, data->value);
@@ -18,12 +30,18 @@ void write_pair(htab_pair_t *data)
 
 int main(int argc, char *argv[])
 {
-    //TODO general file opening
-    (void) argc; (void) argv;
-    
-    //TODO file opening was unsuccessful
-    FILE *fr = fopen("/usr/share/dict/words", "r");
-    
+    FILE *fr = stdin;
+
+    if (argc == 2)
+    {
+        fr = fopen(argv[1], "r");
+        if (fr == NULL) 
+        {
+            fprintf(stderr, "Chyba pri otvarani suboru\n");
+            return 1;
+        }
+    }
+
     bool limit_reached = false;
     int length;
     

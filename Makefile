@@ -8,7 +8,7 @@ LIB_HEADERS=htab.h htab_private.h
 
 .PHONY: clean
 
-all: tail wordcount 
+all: tail wordcount wordcount-dynamic
 
 tail: tail.o
 	$(CC) $(CLFAGS) $< -o $@
@@ -16,9 +16,16 @@ tail: tail.o
 wordcount: wordcount.o io.o libhtab.a 
 	$(CC) $(CFLAGS) wordcount.o io.o -o $@ -static -L. -lhtab
 
+wordcount-dynamic: wordcount.o io.o libhtab.so
+	$(CC) $(CFLAGS) wordcount.o io.o -o $@ -L. -lhtab
+
 #static library
 libhtab.a: $(LIB_OBJ) $(LIB_HEADERS)
 	ar rcs $@ $^
+
+#dynamic library
+libhtab.so: $(LIB_OBJ) $(LIB_HEADERS)
+	$(CC) $(CFLAGS) -shared $^ -o $@
 
 #create all object files for library
 htab_%.o: htab_%.c LIB_HEADERS
