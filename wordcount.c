@@ -18,6 +18,7 @@
 #define HTAB_SIZE 20011
 #define MAX_WORD_LEN 127
 
+
 /**
  * @brief Function to write out each word and value from hash table
  *
@@ -86,6 +87,7 @@ int main(int argc, char *argv[])
 
     htab_for_each(table, (*write_pair));
 
+    free(word);
     htab_free(table);
     fclose(fr);
     return 0;
