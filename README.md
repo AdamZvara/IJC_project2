@@ -1,8 +1,10 @@
-# ijc-project2
-Second project for IJC course
+# IJC_project2
+My solution for second project - IJC course (FIT VUT 2020/2021) - [Assignment](assignment.html) 
 
-## Things I've done
-  * function with hash table
-  * advanced doxygen documentation
+## Things to do
+  * hash table + functions
+  * doxygen documentation
   * shared/static library
   * makefile which doesnt make me want to puke
+
+## Evaluation 15/15
